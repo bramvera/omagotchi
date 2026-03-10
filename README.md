@@ -4,6 +4,8 @@ A tiny 8-bit pixel art virtual pet that lives in your Waybar. Raise it, feed it,
 
 Built for [Omarchy](https://omarchy.org/) (Arch Linux + Hyprland + Waybar).
 
+![Waybar Demo](preview/waybar-demo.gif) ![Zen Garden Demo](preview/garden-demo.gif)
+
 ![Characters](preview/characters.png)
 
 ## Why?
