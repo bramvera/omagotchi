@@ -200,7 +200,7 @@ The sleep text animates progressively:
 
 Right-click the pet to open an interactive zen garden popup.
 
-![Garden Elements](preview/garden-elements.png)
+![Zen Garden](preview/garden-screenshot.png)
 
 ### The Garden Features
 
