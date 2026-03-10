@@ -32,6 +32,11 @@ if [ ${#missing[@]} -gt 0 ]; then
     [[ $REPLY =~ ^[Yy]$ ]] || exit 1
 fi
 
+# ── Backup waybar config ──
+BACKUP="$HOME/.config/waybar.bak.$(date +%s)"
+echo "Backing up waybar config to $BACKUP..."
+cp -r "$HOME/.config/waybar" "$BACKUP"
+
 # ── Copy scripts ──
 echo "Copying scripts to $WAYBAR_SCRIPTS..."
 mkdir -p "$WAYBAR_SCRIPTS"
