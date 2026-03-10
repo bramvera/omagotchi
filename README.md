@@ -50,9 +50,25 @@ And honestly? After 12 hours of debugging a race condition, sometimes you just n
 sudo pacman -S python-cairo python-gobject gtk3
 ```
 
-### Backup First
+### Quick Install
 
-The installer modifies your waybar config. Back up before you install:
+```bash
+git clone https://github.com/bramvera/omagotchi.git
+cd omagotchi
+./install.sh
+```
+
+The installer will:
+1. **Backup** your waybar config (timestamped in `~/.config/waybar.bak.*`)
+2. Copy scripts to `~/.config/waybar/scripts/`
+3. Generate all 86 sprite PNGs to `~/.local/state/omagotchi/sprites/`
+4. Add the CSS import to your waybar `style.css`
+5. Print the waybar module config you need to add
+6. Optionally restart waybar
+
+### Manual Install
+
+**Backup first:**
 
 ```bash
 cp -r ~/.config/waybar ~/.config/waybar.bak
@@ -65,23 +81,6 @@ mv ~/.config/waybar ~/.config/waybar.broken
 mv ~/.config/waybar.bak ~/.config/waybar
 omarchy-restart-waybar  # or: killall waybar && waybar &
 ```
-
-### Quick Install
-
-```bash
-git clone https://github.com/bramvera/omagotchi.git
-cd omagotchi
-./install.sh
-```
-
-The installer will:
-1. Copy scripts to `~/.config/waybar/scripts/`
-2. Generate all 86 sprite PNGs to `~/.local/state/omagotchi/sprites/`
-3. Add the CSS import to your waybar `style.css`
-4. Print the waybar module config you need to add
-5. Optionally restart waybar
-
-### Manual Install
 
 1. Copy scripts:
 ```bash
