@@ -61,8 +61,8 @@ cp -r ~/.config/waybar ~/.config/waybar.bak
 To restore if anything goes wrong:
 
 ```bash
-rm -rf ~/.config/waybar
-cp -r ~/.config/waybar.bak ~/.config/waybar
+mv ~/.config/waybar ~/.config/waybar.broken
+mv ~/.config/waybar.bak ~/.config/waybar
 omarchy-restart-waybar  # or: killall waybar && waybar &
 ```
 
