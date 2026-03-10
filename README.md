@@ -50,6 +50,22 @@ And honestly? After 12 hours of debugging a race condition, sometimes you just n
 sudo pacman -S python-cairo python-gobject gtk3
 ```
 
+### Backup First
+
+The installer modifies your waybar config. Back up before you install:
+
+```bash
+cp -r ~/.config/waybar ~/.config/waybar.bak
+```
+
+To restore if anything goes wrong:
+
+```bash
+rm -rf ~/.config/waybar
+cp -r ~/.config/waybar.bak ~/.config/waybar
+omarchy-restart-waybar  # or: killall waybar && waybar &
+```
+
 ### Quick Install
 
 ```bash
