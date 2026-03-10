@@ -33,7 +33,7 @@ sudo pacman -S python-cairo python-gobject gtk3
 ### Quick Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/omagotchi.git
+git clone https://github.com/bramvera/omagotchi.git
 cd omagotchi
 ./install.sh
 ```
@@ -61,7 +61,7 @@ python3 ~/.config/waybar/scripts/omagotchi.py --generate
 
 3. Add CSS import to `~/.config/waybar/style.css`:
 ```css
-@import "/home/YOUR_USER/.local/state/omagotchi/sprites/omagotchi.css";
+@import "/home/YOUR_USERNAME/.local/state/omagotchi/sprites/omagotchi.css";
 ```
 
 4. Add module to `~/.config/waybar/config.jsonc`:
