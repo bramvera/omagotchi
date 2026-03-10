@@ -304,6 +304,10 @@ The main script (`omagotchi.py`) runs once per second via waybar's `interval: 1`
   omarchy-restart-waybar
   ```
 
+---
+
+If this little pixel creature made your compile times slightly more bearable, consider dropping a star. It takes less effort than catching a crane, and my Neko would appreciate it.
+
 ## License
 
 MIT
