@@ -6,6 +6,24 @@ Built for [Omarchy](https://omarchy.org/) (Arch Linux + Hyprland + Waybar).
 
 ![Characters](preview/characters.png)
 
+## Why?
+
+We spend hours staring at terminals. Waiting for builds to compile. Waiting for `cargo build` to finish its 347th dependency. Waiting for Claude Code to think. Waiting for Codex to spin up. Waiting for CI to go green. Waiting for Docker to pull yet another layer.
+
+There's a lot of waiting in this job.
+
+And in those gaps — those 10-second, 30-second, 2-minute pockets of dead air — your eyes just drift to the status bar anyway. The clock. The battery. The wifi icon. Nothing.
+
+So I put a little creature there instead.
+
+It started as a joke. A tiny tamagotchi on my Waybar, something to click while a long test suite ran. But then I gave it emotions. Then a zen garden. Then birds carrying food. Then snakes that attack if you're not paying attention. Then mythic-tier dragon fruit with a 1-in-158 drop rate.
+
+Now I catch myself glancing up between keystrokes to check if my Neko is still sleeping. I open the garden during compile times and tap cranes for onigiri. I panic-click snakes mid-code-review. I've accidentally bonded with a mass of pixels that lives in 33x22 CSS background space.
+
+It's an ice breaker. A fidget spinner for your status bar. A tiny dopamine hit between the real dopamine hits of shipping code. It won't make you more productive — but it'll make the waiting feel a little less like waiting.
+
+And honestly? After 12 hours of debugging a race condition, sometimes you just need a little ghost friend with purple ears going `zZzZzZ` to remind you that not everything has to be serious.
+
 ## Features
 
 - **6 selectable characters** — Tama, Neko, Usagi, Kuma, Obake, Hiyoko
