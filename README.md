@@ -256,6 +256,20 @@ Click directly on the snake to kill it before it reaches your pet.
     *.png                # 86 generated sprite images
 ```
 
+## Performance
+
+Omagotchi is lightweight. Benchmarked on a live Omarchy system by restarting waybar with and without the module, then measuring after stabilization (~30s):
+
+| | RSS Memory | CPU | System RAM |
+|---|---|---|---|
+| Waybar **without** omagotchi | 77.7 MB | 0.7% | 0.2% |
+| Waybar **with** omagotchi | 82.6 MB | 0.9% | 0.2% |
+| **Overhead** | **+4.9 MB** | **+0.2%** | **0.0%** |
+
+The main script (`omagotchi.py`) runs once per second via waybar's `interval: 1`, reads/writes a small JSON state file, and exits. No persistent daemon. The garden and selection popups only run when opened and close cleanly.
+
+*Measured on Arch Linux, Ryzen 7, 32GB RAM, Hyprland + Waybar. Your numbers may vary slightly.*
+
 ## How It Works
 
 1. **Waybar** calls `omagotchi.py` every second to get display JSON
