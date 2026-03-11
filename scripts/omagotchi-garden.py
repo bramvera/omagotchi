@@ -260,8 +260,12 @@ class Garden(Gtk.Window):
         self.gstate = load_json(GARDEN_FILE, {"inventory": {}})
         self.inv = self.gstate.get("inventory", {})
 
-        if self.state.get("phase") != "alive":
-            self.state["phase"] = "alive"
+        if self.state.get("phase") == "dead":
+            self._show_dead_garden()
+            return
+        if self.state.get("phase") == "egg":
+            self._show_dead_garden()
+            return
         self.state["last_pet"] = time.time()
         save_json(STATE_FILE, self.state)
 
@@ -286,6 +290,19 @@ class Garden(Gtk.Window):
         GLib.timeout_add(random.randint(8000, 15000), self.spawn_snake)
         self.spawn_bird()
         self.show_all()
+
+    def _show_dead_garden(self):
+        phase = self.state.get("phase", "egg")
+        msg = "Your pet has passed. Click to rebirth." if phase == "dead" else "Your egg hasn't hatched yet."
+        dialog = Gtk.MessageDialog(
+            transient_for=self,
+            message_type=Gtk.MessageType.INFO,
+            buttons=Gtk.ButtonsType.OK,
+            text=msg,
+        )
+        dialog.run()
+        dialog.destroy()
+        self.destroy()
 
     def spawn_bird(self):
         if len(self.birds) < 3:
